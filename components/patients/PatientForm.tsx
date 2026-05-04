@@ -162,14 +162,14 @@ export function PatientForm() {
           </div>
         </div>
 
-        <div className="flex justify-end gap-3 pt-6 border-t border-slate-100">
-          <Link href="/patients" className="rounded-xl px-6 py-3.5 text-sm font-semibold text-slate-600 transition-all hover:bg-slate-100 active:scale-[0.98]">
+        <div className="flex flex-col sm:flex-row justify-end gap-3 pt-6 border-t border-slate-100">
+          <Link href="/patients" className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl px-6 py-3.5 text-sm font-semibold text-slate-600 transition-all hover:bg-slate-100 active:scale-[0.98]">
             Cancel
           </Link>
           <button
             type="submit"
             disabled={isPending}
-            className="rounded-xl bg-indigo-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:bg-indigo-500 hover:-translate-y-0.5 hover:shadow-xl active:scale-[0.98] disabled:opacity-50"
+            className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl bg-indigo-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:bg-indigo-500 hover:-translate-y-0.5 hover:shadow-xl active:scale-[0.98] disabled:opacity-50"
           >
             {isPending ? 'Saving...' : 'Save Patient'}
           </button>

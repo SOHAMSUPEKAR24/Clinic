@@ -85,11 +85,11 @@ export default async function EditUserPage({ params }: { params: Promise<{ id: s
           </div>
         </div>
 
-        <div className="flex justify-end gap-4">
-          <Link href="/admin" className="rounded-xl px-6 py-3 text-sm font-semibold text-slate-600 transition-all hover:bg-slate-100 active:scale-[0.98]">
+        <div className="flex flex-col sm:flex-row justify-end gap-3 sm:gap-4">
+          <Link href="/admin" className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold text-slate-600 transition-all hover:bg-slate-100 active:scale-[0.98]">
             Cancel
           </Link>
-          <button type="submit" className="flex items-center gap-2 rounded-xl bg-indigo-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:bg-indigo-500 hover:-translate-y-0.5 hover:shadow-xl active:scale-[0.98]">
+          <button type="submit" className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:bg-indigo-500 hover:-translate-y-0.5 hover:shadow-xl active:scale-[0.98]">
             <Save className="h-4 w-4" /> Save Changes
           </button>
         </div>

@@ -30,7 +30,7 @@ export default async function AdminPage() {
       {/* Create User Form */}
       <div className="glass-panel rounded-2xl p-6 sm:p-8">
         <h3 className="text-lg font-semibold text-slate-900 mb-6">Create New Clinic User</h3>
-        <form action={createUser} className="grid gap-6 sm:grid-cols-4 items-end">
+        <form action={createUser} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-end">
           <div>
             <label className={labelClass}>Username</label>
             <input type="text" name="username" required className={inputClass} placeholder="clinic123" />
@@ -47,7 +47,7 @@ export default async function AdminPage() {
               <option value="365">1 Year</option>
             </select>
           </div>
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <button type="submit" className="w-full rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-slate-900/20 transition-all duration-300 hover:bg-slate-800 hover:-translate-y-0.5 hover:shadow-xl active:scale-[0.98]">
               Create User
             </button>

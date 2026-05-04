@@ -27,14 +27,14 @@ export default async function PatientsPage({
 
   return (
     <div className="space-y-8 animate-fade-in-up">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h2 className="text-3xl font-bold tracking-tight text-slate-900">Patients</h2>
-          <p className="mt-2 text-sm text-slate-500">Manage your patient records.</p>
+          <p className="mt-1 text-sm text-slate-500">Manage your patient records.</p>
         </div>
         <Link
           href="/patients/new"
-          className="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-indigo-500 hover:shadow-lg hover:shadow-indigo-600/30 active:scale-[0.98]"
+          className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-indigo-500 hover:shadow-lg hover:shadow-indigo-600/30 active:scale-[0.98]"
         >
           <Plus className="mr-2 h-4 w-4" />
           Add Patient

@@ -41,25 +41,26 @@ export default async function DashboardPage() {
 
   return (
     <div className="space-y-8 animate-fade-in-up">
-      <div>
-        <h2 className="text-3xl font-bold tracking-tight text-slate-900">Dashboard</h2>
-        <p className="mt-2 text-sm text-slate-500">Overview of your clinic's activity.</p>
-      </div>
-
-      <div className="flex gap-4">
-        <Link
-          href="/patients/new"
-          className="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-indigo-500 hover:shadow-lg hover:shadow-indigo-600/30 active:scale-[0.98]"
-        >
-          <Users className="mr-2 h-4 w-4" />
-          New Patient
-        </Link>
-        <Link
-          href="/quick-notes"
-          className="inline-flex items-center justify-center rounded-xl border border-slate-200/80 bg-white/60 px-5 py-2.5 text-sm font-semibold text-slate-700 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-md active:scale-[0.98]"
-        >
-          Quick Note
-        </Link>
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900">Dashboard</h2>
+          <p className="mt-1 text-sm text-slate-500">Overview of your clinic's activity.</p>
+        </div>
+        <div className="flex items-center gap-3 w-full sm:w-auto">
+          <Link
+            href="/patients/new"
+            className="flex-1 sm:flex-none inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-indigo-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-indigo-500 hover:shadow-lg hover:shadow-indigo-600/30 active:scale-[0.98]"
+          >
+            <Users className="mr-2 h-4 w-4" />
+            New Patient
+          </Link>
+          <Link
+            href="/quick-notes"
+            className="flex-1 sm:flex-none inline-flex items-center justify-center rounded-xl border border-slate-200/80 bg-white/60 px-5 py-2.5 text-sm font-semibold text-slate-700 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-md active:scale-[0.98]"
+          >
+            Quick Note
+          </Link>
+        </div>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-3">
