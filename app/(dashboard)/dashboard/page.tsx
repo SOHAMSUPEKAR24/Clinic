@@ -4,6 +4,9 @@ import { Users, Calendar, Activity } from 'lucide-react'
 import Link from 'next/link'
 import { format } from 'date-fns'
 
+// Revalidate stats every 60s — allows Next.js to serve cached HTML on repeat visits
+export const revalidate = 60
+
 export default async function DashboardPage() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()

@@ -34,8 +34,9 @@ export function Sidebar() {
             <Link
               key={item.name}
               href={item.href}
+              prefetch={true}
               className={cn(
-                'group flex items-center rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-300',
+                'group flex items-center rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-200',
                 isActive
                   ? 'bg-indigo-50 text-indigo-700 shadow-sm ring-1 ring-indigo-100'
                   : 'text-slate-600 hover:bg-slate-50/80 hover:text-slate-900 active:scale-[0.98]'

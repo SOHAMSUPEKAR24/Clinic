@@ -22,26 +22,57 @@
 }
 
 @layer utilities {
+  /* Use backdrop-blur-sm instead of xl — 3-4x cheaper GPU composite */
   .glass-panel {
-    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-[0_8px_30px_rgb(0,0,0,0.04)];
+    @apply bg-white/80 border border-slate-200/60 shadow-[0_4px_20px_rgb(0,0,0,0.04)];
   }
   .card-hover {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)];
+    @apply transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgb(0,0,0,0.07)];
   }
   .animate-fade-in-up {
-    animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fadeInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(15px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Page transition progress bar */
+#nprogress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 9999;
+  background: linear-gradient(to right, #6366f1, #818cf8);
+  border-radius: 0 2px 2px 0;
+  animation: progress-pulse 1.5s ease infinite;
+  transform-origin: left;
+}
+@keyframes progress-pulse {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Skeleton shimmer animation */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
 }
 
 /* Custom Scrollbar */

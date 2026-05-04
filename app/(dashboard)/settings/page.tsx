@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Building, Phone, Mail, MapPin, Stethoscope } from 'lucide-react'
+import { PatientExport } from '@/components/settings/PatientExport'
 
 export default async function SettingsPage() {
   const supabase = await createClient()
@@ -110,6 +111,8 @@ export default async function SettingsPage() {
             </div>
           </div>
         </div>
+
+        <PatientExport />
       </div>
       
       {profile?.role === 'user' && (
